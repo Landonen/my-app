@@ -17,3 +17,10 @@ export async function getPriceData() {
 
     return response.json();
 }
+
+// пишем запрос
+
+export async function getCurrentPrice() {
+    const response = await fetch(`${apiUrl}/nps/price/EE/current`);
+    return response.json();
+}
