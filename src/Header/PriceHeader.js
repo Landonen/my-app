@@ -18,8 +18,8 @@ function PriceHeader(props) {
       if (!success) {
         throw messages[0];
       }
-
-      setCurrentPrice(data[0].price);
+      const kWPrice = +(data[0].price / 10 * 1.2).toFixed(2);
+      setCurrentPrice(kWPrice);
     })
     .catch((error) => setErrorMessage(error.toString()));
   }, []);
